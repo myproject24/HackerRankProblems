@@ -3,12 +3,12 @@
 using namespace std;
 
 int main() {
-	MemoryBlock* ptrMB = new MemoryBlock(10);
-	MemoryBlock* ptrMB1(ptrMB);
-	MemoryBlock* ptrMB2 = ptrMB;
-	MemoryBlock* ptrMB3 = move(ptrMB);
+	MemoryBlock obj(10);
+	MemoryBlock obj1(obj);
+	obj = obj1;
 
-	delete ptrMB;
+	MemoryBlock obj2(std::move(obj));
+	obj1 = obj2;
 
 	getchar();
 	return 0;
