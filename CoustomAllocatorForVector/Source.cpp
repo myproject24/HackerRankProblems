@@ -3,6 +3,7 @@
 
 using namespace std;
 
+//coustom allocator for vector
 template<typename type>
 struct MyAlloc : allocator<type>
 {
